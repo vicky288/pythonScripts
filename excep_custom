@@ -1,0 +1,24 @@
+class UserExcep(Exception):
+	pass
+
+class InputExcepNeg(UserExcep):
+	def __init__(self, message):
+		self.msg = message
+
+
+class InputExcepZero(UserExcep):
+	def __init__(self, message):
+		self.msg = message
+def tester(val):
+	if val<0:
+		raise InputExcepNeg("Val can't be -ve")
+	elif val==0:
+		raise InputExcepZero("Val can't be zero")
+	else:
+		print "OK"
+
+
+try:
+	tester(-1)
+except Exception as ex:
+	print ex.msg
