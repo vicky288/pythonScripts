@@ -1,7 +1,7 @@
 import socket
 tcpsocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 #tcpsocket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR,1)
-tcpsocket.bind(("0.0.0.0",8002))
+tcpsocket.bind(("0.0.0.0",8006))
 tcpsocket.listen(2)
 print "Waiting for Client...."
 (client,(ip,port)) = tcpsocket.accept()

@@ -1,5 +1,6 @@
 import signal
 
+#man signal
 def ctrlc_handler(signum,frm):
 	print "haha u can't kill me"
 
